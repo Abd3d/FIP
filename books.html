@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Libros | Books</title>
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <h1 class="hidden">Libros Book Store - Books</h1>
+    <div id="container">
+
+        <header id="mainHeader">
+            <div id="logo">
+                <img class=" logo" src="images/logo.svg" alt="logo" width="182" height="82">
+            </div>
+            <!--end logo-->
+            <nav id="mainNav" class="navMenu navMenuHeader">
+                <h2 class="hidden">Header Navigation menu</h2>
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="books.html"><span class="currentPage">Books</span></a>
+                    </li>
+                    <li>
+                        <a href="audiobooks.html">Audiobooks</a>
+                    </li>
+                    <li>
+                        <a href="events.html">Events</a>
+                    </li>
+                    <li>
+                        <a href="about.html">About us</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+                <section class="searchCon">
+                    <h2 class="hidden">Search</h2>
+
+                    <input id="search" type="search" placeholder="Search...">
+                    <div class="searchIconCon">
+                        <img src="images/search.svg" width="20" height="20" alt="search">
+                    </div>
+
+                    <div class="cart">
+                        <img src="images/cart.svg" width="20" height="20" alt="cart">
+                    </div>
+                </section>
+
+                <!-- end Search-->
+            </nav>
+            <!--end mainNav-->
+
+
+        </header>
+
+        <main>
+            <div id="heroFull" class="heroFullBG">
+                <section class="bookMenu">
+                    <h2 class="hidden">Books Menu</h2>
+                    <nav>
+                        <h3 class="hidden">Books Category</h3>
+                        <ul>
+                            <li>
+                                <a href="#" class="selectedBook">Fiction</a>
+                            </li>
+                            <li>
+                                <a href="#">Non-Fiction</a>
+                            </li>
+                            <li>
+                                <a href="#">Kids</a>
+                            </li>
+                            <li>
+                                <a href="#">Romance</a>
+                            </li>
+                            <li>
+                                <a href="#">Manga</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </section>
+                <section class="bookList">
+                    <h2 class="hidden">Book List</h2>
+                    <img src="images/arrow.svg" width="16" height="16" alt="previous page" class="arrow arrowPrevious">
+                    <img src="images/arrow.svg" width="16" height="16" alt="previous page" class="arrow arrowNext">
+                    <ul>
+                        <li><a href="#"><img src="images/book1.jpg" width="130" height="200" alt="book1"></a></li>
+                        <li><a href="#"><img src="images/book2.jpg" width="130" height="200" alt="book2"></a></li>
+                        <li><a href="#"><img src="images/book3.jpg" width="130" height="200" alt="book3"></a></li>
+                        <li><a href="#"><img src="images/book4.jpg" width="130" height="200" alt="book4"></a></li>
+                        <li><a href="#"><img src="images/book5.jpg" width="130" height="200" alt="book5"
+                                    class="selectedBook"></a></li>
+                    </ul>
+                </section>
+            </div><!-- end heroFull -->
+            <div id="specialOfferLeft">
+                <section>
+                    <h2 class="hidden">Book Details</h2>
+                    <label class="lbl_price">C$15.0</label>
+                    <label id="lbl_bookTitle" class="lbl_main">The Wrong Family</label>
+                    <div id="synopsis">
+                        <label class="lbl_general">
+                            synopsis
+                        </label>
+                        <p class="p_general">Juno was wrong about Winnie Crouch. Before moving in with the Crouch
+                            family, Juno thought Winnie and her husband, Nigel, had the perfect marriage, the perfect
+                            son—the perfect life.</p>
+                    </div>
+                    <div class="con">
+                        <div id="author">
+                            <label class="lbl_general">
+                                Author
+                            </label>
+                            <p class="p_general">Tarryn Fisher</p>
+                        </div>
+                        <div id="date_published">
+                            <label class="lbl_general">
+                                Date Published
+                            </label>
+                            <p class="p_general">December 29, 2020</p>
+                        </div>
+                    </div>
+                    <div class="con">
+                        <div id="category">
+                            <label class="lbl_general">
+                                Category
+                            </label>
+                            <p class="p_general">Fiction</p>
+                        </div>
+                        <a href="#" class="productLink">Details</a>
+                    </div>
+                </section>
+            </div><!-- end specialOfferLeft -->
+            <div id="specialOfferRight">
+                <label id="lbl_numberOfBooks" class="lbl_main">Over <strong>25,000</strong> Books</label>
+                <section class="bookChart">
+                    <h2 class="hidden">Books Chart</h2>
+                    <div id="category1"></div>
+                    <div id="category2"></div>
+                    <div id="category3"></div>
+                    <div id="category4"></div>
+                    <div id="category5"></div>
+                    <div id="legend">
+                        <ul>
+                            <li class="category1">Fiction 44%</li>
+                            <li class="category2">Non-Fiction 5%</li>
+                            <li class="category3">Kids 22%</li>
+                            <li class="category4">Romance 17%</li>
+                            <li class="category5">Manga 12%</li>
+                        </ul>
+                    </div>
+
+                </section>
+            </div><!-- end specialOfferRight -->
+        </main>
+
+        <footer id="mainFooter">
+            <div id="footerNav" class="navMenu ">
+                <h2 class="hidden">Footer Navigation menu</h2>
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="books.html"><span class="currentPage">Books</span></a>
+                    </li>
+                    <li>
+                        <a href="audiobooks.html">Audiobooks</a>
+                    </li>
+                    <li>
+                        <a href="events.html">Events</a>
+                    </li>
+                    <li>
+                        <a href="about.html">About us</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+            <!--end FooterNav-->
+            <div id="copyRight" class="socialMedia">
+                <ul>
+                    <li><img src="images/facebook.svg" width="20" height="20" alt="facebook"></li>
+                    <li><img src="images/twitter.svg" width="20" height="20" alt="twitter"></li>
+                    <li><img src="images/instagram.svg" width="20" height="20" alt="instagram"></li>
+                </ul>
+                <p id="p_copyRight">Copyright 2022. All rights reserved.</p>
+            </div>
+            <!--end Copyright-->
+
+        </footer>
+
+    </div>
+    <!--end siteContainer-->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
