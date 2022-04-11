@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Libros | Events</title>
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <h1 class="hidden">Libros Book Store - Events</h1>
+    <div id="container">
+
+        <header id="mainHeader">
+
+            <div id="logo">
+                <img class=" logo" src="images/logo.svg" alt="logo" width="182" height="82">
+            </div>
+            <!--end logo-->
+            <nav id="mainNav" class="navMenu navMenuHeader">
+                <h2 class="hidden">Header Navigation menu</h2>
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="books.html">Books</a>
+                    </li>
+                    <li>
+                        <a href="audiobooks.html">Audiobooks</a>
+                    </li>
+                    <li>
+                        <a href="events.html"><span class="currentPage">Events</span></a>
+                    </li>
+                    <li>
+                        <a href="about.html">About us</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+                <section class="searchCon">
+                    <h2 class="hidden">Search</h2>
+
+                    <input id="search" type="search" placeholder="Search...">
+                    <div class="searchIconCon">
+                        <img src="images/search.svg" width="20" height="20" alt="search">
+                    </div>
+
+                    <div class="cart">
+                        <img src="images/cart.svg" width="20" height="20" alt="cart">
+                    </div>
+                </section>
+
+                <!-- end Search-->
+            </nav>
+            <!--end mainNav-->
+
+
+        </header>
+        <main>
+            <div id="contactLeft">
+                <section>
+                    <h2 class="lbl_header">Events</h2>
+                    <label id="year">2022</label>
+                    <div id="days">
+                        <span>01</span>
+                        <span>02</span>
+                        <span>03</span>
+                        <span class="currentDay">04</span>
+                        <span>05</span>
+                        <span>06</span>
+                        <span>07</span>
+                        <span>08</span>
+                        <span>09</span>
+                        <span>10</span>
+                        <span>11</span>
+                        <span>12</span>
+                    </div>
+                    <div id="eventsList">
+                        <label id="day" class="eventHeader">Day</label>
+                        <label id="currentEventday" class="currentDay eventDetails">14</label>
+                        <label id="nextEventday" class="eventDetails">03</label>
+                        <label id="eventSubject" class="eventHeader">Event Subject</label>
+                        <label id="eventCurrentSubject" class="currentEvent eventDetails">Speed Reading</label>
+                        <label id="eventSubject1" class="eventDetails">The World Reading Day</label>
+                    </div>
+                    <img src="images/arrow.svg" width="16" height="16" alt="previous page"
+                        class="arrow arrowPreviousBottom">
+                    <img src="images/arrow.svg" width="16" height="16" alt="previous page"
+                        class="arrow arrowNextBottom">
+                </section>
+            </div>
+            <!--end contactLeft-->
+            <div id="contactRight">
+                <section>
+                    <h2 class="lbl_header">Event Details</h2>
+                    <label class="header">Speed Reading</label>
+                    <div id="eventDetails">
+                        <label id="eventDate" class="eventLblStyle">Date:</label>
+                        <label id="eventDateDetails">April 14,2022</label>
+                        <label id="eventTime" class="eventLblStyle">Time:</label>
+                        <label id="eventTimeDetails"><span>Start 07:00 P.M.</span>
+                            <span>End 08:30 P.M.</span></label>
+                        <label id="eventSpeaker" class="eventLblStyle">Speaker(s):</label>
+                        <label id="eventSpeakerDetails">Prof. Adam</label>
+                        <label id="eventOrganizer" class="eventLblStyle">Organizer:</label>
+                        <label id="eventOrganizerDetails">Book Store Co.</label>
+                        <label id="eventFees" class="eventLblStyle">Fees</label>
+                        <label id="eventFeesDetails">c$00.00</label>
+                        <label id="eventLocation" class="eventLblStyle">Location</label>
+                        <label id="eventLocationDetails"><span>Main Street</span>
+                            <span>A0A 0A0</span>
+                            <span>London, On, Canada</span></label>
+                        <input type="button" value="MAP" id="btnMap">
+                    </div>
+                </section>
+            </div>
+            <!--end contactRight-->
+        </main>
+
+        <footer id="mainFooter">
+
+
+            <div id="footerNav" class="navMenu">
+                <h2 class="hidden">Footer Navigation menu</h2>
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="books.html">Books</a>
+                    </li>
+                    <li>
+                        <a href="audiobooks.html">Audiobooks</a>
+                    </li>
+                    <li>
+                        <a href="events.html"><span class="currentPage">Events</span></a>
+                    </li>
+                    <li>
+                        <a href="about.html">About us</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+            <!--end FooterNav-->
+            <div id="copyRight" class="socialMedia ">
+                <ul>
+                    <li><img src="images/facebook.svg" width="20" height="20" alt="facebook"></li>
+                    <li><img src="images/twitter.svg" width="20" height="20" alt="twitter"></li>
+                    <li><img src="images/instagram.svg" width="20" height="20" alt="instagram"></li>
+                </ul>
+                <p id="p_copyRight">Copyright 2022. All rights reserved.</p>
+            </div>
+            <!--end Copyright-->
+
+        </footer>
+        <!--end Footer-->
+
+    </div>
+    <!--end siteContainer-->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
