@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Libros | Contact US</title>
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <h1 class="hidden">Libros Book Store - Contact Us</h1>
+    <div id="container">
+
+        <header id="mainHeader">
+
+            <div id="logo">
+                <img class="boxColor1 logo" src="images/logo.svg" alt="logo" width="182" height="82">
+            </div>
+            <!--end logo-->
+            <nav id="mainNav" class="navMenu navMenuHeader">
+                <h2 class="hidden">Header Navigation menu</h2>
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="books.html">Books</a>
+                    </li>
+                    <li>
+                        <a href="audiobooks.html">Audiobooks</a>
+                    </li>
+                    <li>
+                        <a href="events.html">Events</a>
+                    </li>
+                    <li>
+                        <a href="about.html">About us</a>
+                    </li>
+                    <li>
+                        <a href="contact.html"><span class="currentPage">Contact Us</span></a>
+                    </li>
+                </ul>
+                <section class="searchCon">
+                    <h2 class="hidden">Search</h2>
+
+                    <input id="search" type="search" placeholder="Search...">
+                    <div class="searchIconCon">
+                        <img src="images/search.svg" width="20" height="20" alt="search">
+                    </div>
+
+                    <div class="cart">
+                        <img src="images/cart.svg" width="20" height="20" alt="cart">
+                    </div>
+                </section>
+
+                <!-- end Search-->
+            </nav>
+            <!--end mainNav-->
+
+
+        </header>
+        <!--end mainHeader-->
+
+        <main>
+            <div id="contactLeft">
+                <section>
+                    <h2 class="lbl_main lbl_header">Conatct Us</h2>
+                    <form action="form.php" method="post" autocomplete="off">
+                        <label for="fName" class="lbl">First name:<span class="required">*</span></label>
+                        <input type="text" id="fName" placeholder="First name" class="longInput" required>
+
+                        <label for="lName" class="lbl">Last name:<span class="required">*</span></label>
+                        <input type="text" id="lName" placeholder="Last name" class="longInput" required>
+
+                        <label for="email" class="lbl">Email:<span class="required">*</span></label>
+                        <input type="email" id="email" placeholder="Email" class="longInput" required>
+
+                        <label for="telephone" class="lbl">Telephone:</label>
+                        <input type="tel" id="telephone" placeholder="Telephone" class="longInput">
+
+                        <label for="message" class="lbl">Message:<span class="required">*</span></label>
+                        <textarea id="message" class="longInput txtArea" required></textarea>
+                        <input type="submit" value="Submit" class="btn_short btn_submit">
+                    </form>
+                </section>
+            </div>
+            <!--end contactLeft-->
+            <div id="contactRight">
+                <section>
+                    <h2 class="lbl_main lbl_header">Customer Service</h2>
+                    <img src="images/customer_service.svg" alt="customer service" width="120" height="120"
+                        class="setCenter">
+                    <a href="tel:5191230000" class="lbl_contact setCenter link">Call us at 519-123-0000</a>
+                    <label class="lbl_contact setCenter">Service Hours</label>
+                    <label class="setCenter lbl_servH">Mon. -Fri.: 8:00 A.M. - 5:00 P.M.</label>
+                    <div id="map" class="setCenter">
+                        <h3 class="hidden">Company's location on Google map</h3>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2918.808759706207!2d-81.2475316847399!3d42.98230197914992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882ef21b9e0a0b27%3A0xbe1688977391b6c1!2sDowntown%20London!5e0!3m2!1sen!2sca!4v1644381610235!5m2!1sen!2sca"
+                            width="400" height="270" style="border: 1px" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </section>
+            </div>
+            <!--end contactRight-->
+        </main>
+
+        <footer id="mainFooter">
+
+            <div id="footerNav" class="navMenu">
+                <h2 class="hidden">Footer Navigation menu</h2>
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="books.html">Books</a>
+                    </li>
+                    <li>
+                        <a href="audiobooks.html">Audiobooks</a>
+                    </li>
+                    <li>
+                        <a href="events.html">Events</a>
+                    </li>
+                    <li>
+                        <a href="about.html">About us</a>
+                    </li>
+                    <li>
+                        <a href="contact.html"><span class="currentPage">Contact Us</span></a>
+                    </li>
+                </ul>
+            </div>
+            <!--end FooterNav-->
+            <div id="copyRight" class="socialMedia boxColor1">
+                <ul>
+                    <li><img src="images/facebook.svg" width="20" height="20" alt="facebook"></li>
+                    <li><img src="images/twitter.svg" width="20" height="20" alt="twitter"></li>
+                    <li><img src="images/instagram.svg" width="20" height="20" alt="instagram"></li>
+                </ul>
+                <p id="p_copyRight">Copyright 2022. All rights reserved.</p>
+            </div>
+            <!--end Copyright-->
+
+        </footer>
+        <!--end Footer-->
+
+    </div>
+    <!--end siteContainer-->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
