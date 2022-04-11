@@ -1,0 +1,1031 @@
+@charset "UTF-8";
+/* CSS Document */
+/* Variables */
+:root {
+  --color-blue: #445565;
+  --color-brown: #985d07;
+  --color-lightBlue: #b7ccd2;
+  --color-white: #f5f5f5;
+  --color-black: #333;
+  --color-lightBrown: rgba(238, 148, 12, 0.3);
+  --shadow:rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+@font-face {
+  src: url(../assets/jura.woff);
+  font-family: "Jura";
+}
+@font-face {
+  src: url(../assets/handlee.woff);
+  font-family: "Handlee";
+}
+
+/*Remove this rule on your HTML elements as you start to fill them with content*/
+
+.boxColor {
+  color: #fff;
+  background: #000;
+  text-align: center;
+  margin: 0;
+}
+
+/*basic reset*/
+
+/*browsers have built in values for elements so we'll reset a few things to zero, you can add to this or remove items as needed*/
+
+div,
+p,
+body,
+header,
+footer,
+section,
+article,
+nav {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  border: none; /*Remove border if image is a link*/
+  margin: 0;
+  padding: 0;
+}
+
+/*html selectors*/
+
+body {
+  font-family: "Jura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  color: #333;
+  background-image: url(../images/webb.png);
+  /*border-top: solid 20px black;*/
+}
+
+/* Remove underlines from links */
+
+a {
+  text-decoration: none;
+}
+
+/*hide elements from browser but show for doc outline*/
+
+.hidden {
+  display: none;
+}
+
+/*Common page elements  */
+
+/*This is essentially a box that we place the whole site in.  
+We center the box using margin 0 auto and give it a fixed width of 920 + 20px + 20px (960px) so it fits on 1024x768 screens.*/
+
+#container {
+  margin: 0 auto;
+  width: 920px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  background-image: linear-gradient(to bottom, var(--color-blue), var(--color-blue) 2%, var(--color-brown) 2%, var(--color-brown) 3%,var(--color-blue) 3%,var(--color-blue) 18%,white 18%,white 86%,var(--color-blue) 86%);
+  box-shadow: var(--shadow);
+  /* this is our grid based off of our photoshop file */
+  display: grid;
+  grid-template-columns: repeat(10, 74px);
+  grid-column-gap: 20px;
+  grid-row-gap: 80px;
+}
+
+#mainHeader {
+  /* makes the grid ignore this element */
+  display: contents;
+}
+
+#logo {
+  grid-column: 1/3;
+  /* Remove as content will dictate height */
+  height: 100px;
+}
+
+#mainNav {
+  grid-column: 5/11;
+  /* Remove as content will dictate height */
+  height: 100px;
+}
+
+main {
+  /* makes the grid ignore this element */
+  display: contents;
+}
+
+#mainFooter {
+  /* makes the grid ignore this element */
+  display: contents;
+}
+
+#footerNav {
+  grid-column: 1/6;
+  /* Remove as content will dictate height */
+  display: grid;
+  place-items: center;
+  height: 100px;
+}
+
+#copyRight {
+  grid-column: 8/11;
+  /* Remove as content will dictate height */
+  height: 100px;
+}
+
+/* Unique Page Elements */
+/*Header:  Logo, Navigtion Menu, Search, Cart*/
+/* Logo */
+.logo {
+  padding: 5px;
+}
+/* Navigation Menu (Header and Footer)*/
+ul {
+  list-style: none;
+  margin-left: 10px;
+  padding-left: 0;
+}
+.navMenu ul li {
+  color: #f5f5f5;
+  margin-top: 5px;
+  padding-right: 10px;
+  display: inline-block;
+}
+.navMenu ul li a {
+  color: #f5f5f5;
+  font-size: 12px;
+}
+.navMenuHeader ul li a{
+  font-size: 1em;
+  letter-spacing: 1.5px;
+}
+.navMenu ul li:not(:last-child):after {
+  content: "|";
+  padding-left: 10px;
+}
+.navMenu ul li:hover {
+  color: var(--color-lightBlue);
+  cursor: pointer;
+}
+.navMenu .currentPage {
+  outline: 3px solid rgba(167, 166, 166, 0.5);
+  outline-offset: 2px;
+  padding: 5px;
+  background-color: var(--color-brown);
+}
+
+/* Search */
+.searchCon {
+  position: relative;
+  display: flex;
+  place-items: center;
+  width: 100%;
+  height: 50px;
+}
+#search {
+  margin-left: 10px;
+  padding-left: 10px;
+  width: 350px;
+  height: 35px;
+}
+.searchIconCon {
+  display: grid;
+  place-items: center;
+  border: none;
+  background-color: var(--color-brown);
+  width: 35px;
+  height: 35px;
+}
+.searchIconCon img {
+  cursor: pointer;
+}
+/* Cart */
+.cart {
+  position: absolute;
+  right: 110px;
+}
+/* Arrow */
+.arrow{
+  cursor: pointer;
+  position: absolute;
+  
+  padding: 10px;
+  text-align: center;
+  background-color: var(--color-lightBlue) ;
+  box-shadow: var(--shadow);
+}
+.arrowPrevious{
+  transform: rotateY(180deg);
+  top:0;
+  left:0px;
+}
+.arrowNext{
+  top:0;
+  right:0px;
+}
+.arrowPreviousBottom{
+  transform: rotateY(180deg);
+  bottom: 0;
+  left:0px;
+}
+.arrowNextBottom{
+  right:0px;
+  bottom: 0;
+}
+
+/* Footer:Social Media, Copy right*/
+/* Social Media */
+.socialMedia ul li {
+  display: inline-block;
+  justify-items: center;
+  padding: 10px;
+}
+.socialMedia ul li:hover {
+  cursor: pointer;
+}
+/* Copy Right */
+#copyRight {
+  background-color: var(--color-brown);
+  text-align: center;
+}
+#p_copyRight {
+  color: var(--color-white);
+}
+/* Input Fields Setting */
+/* Short Size Input*/
+.form {
+  display: grid;
+  margin: auto;
+  padding-top: 10px;
+  text-align: left;
+  width: 200px;
+}
+.shortInput {
+  width: 190px;
+  height: 35px;
+  border: solid 2px var(--color-brown);
+  margin: 5px 0 3px 0;
+  padding-left: 5px;
+}
+.longInput {
+  margin-top: 5px;
+  margin-left: 50px;
+  width: 300px;
+  height: 30px;
+  border: solid 2px var(--color-lightBrown);
+  border-radius: 10px;
+  padding-left: 8px;
+  font-size: 1.2em;
+}
+.txtArea {
+  height: 130px;
+  resize: none;
+}
+/* General Format */
+.lbl_login {
+  display: block;
+  font-size: 1.2em;
+  color: var(--color-black);
+  font-weight: 600;
+}
+.lbl_main {
+  display: block;
+  text-align: center;
+  width: 100%;
+  font-size: 1.5em;
+  font-family: "handlee";
+  font-weight: 600;
+  margin-top: 25px;
+  letter-spacing: 5px;
+}
+.lbl_product{
+    font-size: 1.5em;
+  letter-spacing: 2px;
+}
+.lbl_mainBG {
+  top: 0;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 60px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: var(--color-lightBlue);
+}
+.lbl {
+  display: block;
+  margin-top: 20px;
+  margin-left: 55px;
+  font-size: 1.3em;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+}
+.required {
+  color: red;
+}
+.btn_short {
+  width: 100%;
+  height: 35px;
+  background-color: var(--color-blue);
+  color: var(--color-white);
+  font-size: 1em;
+  cursor: pointer;
+  letter-spacing: 2px;
+}
+.btn_submit {
+  cursor: pointer;
+  border-radius: 15px;
+  margin-top:10px;
+  margin-left: 50px;
+  width: 310px;
+  font-family: "Jura";
+  font-size: 1.5em;
+}
+.link {
+  text-align: right;
+  margin-top: 5px;
+  color: var(--color-brown);
+  font-size: 1em;
+  font-weight: 500;
+}
+.link a:not(:last-child):after {
+  content: "|";
+  padding: 0 5px 0 5px;
+}
+.productLink{
+  display: block;
+  text-align: center;margin:auto;
+  padding-top: 10px;
+  color: var(--color-brown);
+  font-size: 1.3em;
+  font-weight: 600;
+  width: 50px;
+}
+
+.lbl_general,
+.p_general {
+  display: block;
+  font-family: "handlee";
+  letter-spacing: 1px;
+}
+.lbl_general {
+  text-indent: 10px;
+  font-size: 1.4em;
+  color: var(--color-brown);
+  width: 100%;
+  font-weight: 700;
+}
+.p_general {
+  text-indent: 20px;
+  margin-left: 15px;
+  margin-bottom: 5px;
+  font-weight: 600;
+  line-height: 25px;
+  font-size: 1.2em;
+  color: var(--color-black);
+}
+
+.lbl_header {
+  display: grid;
+  place-items: center;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 60px;
+  background-color: var(--color-lightBlue);
+  font-size: 1.6em;
+  letter-spacing: 2px;
+  font-weight: 800;
+}
+/* page 1 */
+
+#heroImage {
+  grid-column: 1/7;
+  /* Remove as content will dictate height */
+  position: relative;
+  display: grid;
+  place-items: center;
+  height: 250px;
+  outline: 5px solid rgba(167, 166, 166, 0.5);
+  outline-offset: -10px;
+}
+#quote {
+  position: absolute;
+  display: flex;
+  width: 250px;
+  height: 150px;
+  right: 20px;
+  top: 50px;
+  font-family: "Handlee";
+  line-height: 30px;
+  letter-spacing: 2px;
+  font-weight: 800;
+}
+#heroText {
+  grid-column: 8/11;
+  /* Remove as content will dictate height */
+  height: 250px;
+  background-color: var(--color-white);
+}
+#lbl_login {
+  display: grid;
+  place-items: center;
+  margin: 0 auto 0 auto;
+  border-radius: 0 0 8px 8px;
+  width: 130px;
+  height: 35px;
+  background-color: var(--color-lightBlue);
+  font-size: 1.5em;
+  color: var(--color-brown);
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+#product1 {
+  grid-column: 1/4;
+  /* Remove as content will dictate height */
+  text-align: center;
+  background-color: var(--color-white);
+  box-shadow: var(--shadow);
+  height: 300px;
+}
+
+#product2 {
+  grid-column: 4/8;
+  /* Remove as content will dictate height */
+  text-align: center;
+  background-color: var(--color-lightBlue);
+  box-shadow: var(--shadow);
+  height: 300px;
+}
+
+#product3 {
+  grid-column: 8/11;
+  /* Remove as content will dictate height */
+  text-align: center;
+  background-color: var(--color-white);
+  box-shadow: var(--shadow);
+  height: 300px;
+}
+
+/* page 2 */
+/* Event Page */
+#contactLeft {
+  grid-column: 1/6;
+  /* Remove as content will dictate height */
+  background-color: var(--color-white);
+  height: 630px;
+  position: relative;
+}
+#year {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  background-color: var(--color-lightBlue);
+  border-top-left-radius: 10%;
+  border-bottom-left-radius: 10%;
+  height: 60px;
+  width: 100px;
+  font-size: 1.5em;
+  
+  font-family: "handlee";
+  font-weight: 600;
+  transform: rotate(-90deg);
+}
+#days {
+  position: absolute;
+  background-color: var(--color-blue);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  color: var(--color-white);
+  width: 300px;
+  padding: 10px;
+  left: 100px;
+  top: 60px;
+  font-size: 1.5em;
+  font-family: "handlee";
+  font-weight: 500;
+  height: 60px;
+}
+
+#days span {
+  display: inline-block;
+  width: 25px;
+  margin-right: 20px;
+}
+.currentDay {
+  text-align: center;
+  background-color: var(--color-brown);
+  color: var(--color-white);
+  padding: 2px;
+  border-radius: 20%;
+  font-family: "handlee";
+}
+#eventsList {
+  position: absolute;
+  display: grid;
+  grid-template-columns: 20% auto;
+  grid-template-rows: auto auto auto;
+  width: 100%;
+  height: 150px;
+  top: 160px;
+  row-gap: 20px;
+  
+  font-family: "handlee";
+  grid-template-areas:
+    "r00 r01"
+    "r10 r11"
+    "r20 r21";
+  font-size: 1.5em;
+  letter-spacing: 2px;
+}
+.eventHeader {
+  color: var(--color-brown);
+  font-weight: 600;
+  justify-self: center;
+  align-self: center;
+}
+.eventDetails {
+  justify-self: center;
+  align-self: center;
+}
+#day {
+  grid-area: r00;
+}
+
+#currentEventday {
+  grid-area: r10;
+}
+.currentEvent {
+  display: block;
+  border: solid 2px #b48209;
+  width: 300px;
+  padding: 20px;
+  text-align: center;
+}
+#nextEventday {
+  grid-area: r20;
+}
+
+#eventSubject {
+  grid-area: r01;
+}
+
+#eventCurrentSubject {
+  grid-area: r11;
+}
+
+#eventSubject1 {
+  grid-area: r21;
+}
+
+#contactRight {
+  grid-column: 6/11;
+  /* Remove as content will dictate height */
+
+  background-color: var(--color-white);
+  height: 630px;
+  position: relative;
+}
+.header {
+  display: grid;
+  place-items: center;
+  position: absolute;
+  background-color: var(--color-blue);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  color: var(--color-white);
+  width: 300px;
+  left: 75px;
+  height: 60px;
+  top: 60px;
+  font-size: 1.8em;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+}
+#eventDetails {
+  display: grid;
+  position: absolute;
+  grid-template-columns: 40% 60%;
+  grid-template-rows: repeat(7,auto);
+  grid-template-areas:
+    "r00 r01" "r10 r11" "r20 r21" "r30 r31" "r40 r41" "r50 r51"
+    "r60 r61";
+  font-size: 1.4em;
+  width: 100%;
+  height: 50px;
+  row-gap: 20px;
+  padding-right: 20px;
+  top: 150px;
+  font-family: "handlee";
+}
+.eventLblStyle {
+  padding-left: 30px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: var(--color-brown);
+}
+#eventDate {
+  grid-area: r00;
+}
+#eventDateDetails {
+  grid-area: r01;
+}
+#eventTime {
+  grid-area: r10;
+}
+#eventTimeDetails span {
+  line-height: 30px;
+  display: block;
+  grid-area: r11;
+}
+#eventSpeaker {
+  grid-area: r20;
+}
+#eventSpeakerDetails {
+  grid-area: r21;
+}
+#eventOrganizer {
+  grid-area: r30;
+}
+#eventOrganizerDetails {
+  grid-area: r31;
+}
+#eventFees {
+  grid-area: r40;
+}
+#eventFeesDetails {
+  grid-area: r41;
+}
+#eventLocation {
+  grid-area: r50;
+}
+#eventLocationDetails span {
+  line-height: 30px;
+  display: block;
+  grid-area: r51;
+}
+#btnMap {
+  grid-area: r61;
+  width: 70%;
+  background-color: var(--color-blue);
+  height: 35px;
+  color:var(--color-white);
+  letter-spacing: 3px;
+}
+/* Contact Us Page */
+
+.setCenter
+{
+  display: grid;
+  place-items: center;
+  width:100%;
+  margin-top:20px;
+}
+
+.lbl_contact{
+font-size: 1.5em;
+font-weight: 700;
+font-family: "handlee";
+letter-spacing: 1px;
+}
+.lbl_tel a{
+  color: var(--color-brown);
+}
+.lbl_servH{
+  margin-top: 7px;
+  font-size: 1.4em;
+  font-weight: 600;
+  margin-bottom: 15px;
+  letter-spacing: 2px;
+  font-family: "handlee";
+
+}
+
+#map iframe{
+ 
+  border: solid 4px var(--color-lightBrown);
+  border-radius: 10px;
+}
+/* page 3 */
+
+#service1 {
+  grid-column: 1/4;
+  /* Remove as content will dictate height */
+  height: 250px;
+}
+
+#service2 {
+  grid-column: 4/8;
+  /* Remove as content will dictate height */
+  height: 250px;
+}
+
+#service3 {
+  grid-column: 8/11;
+  /* Remove as content will dictate height */
+  height: 250px;
+}
+
+#banner {
+  grid-column: 1/11;
+  /* Remove as content will dictate height */
+  height: 300px;
+}
+
+/* page 4 */
+
+#heroFull {
+  grid-column: 1/11;
+  /* Remove as content will dictate height */
+  position: relative;
+  overflow: hidden;
+  background-color: var(--color-white);
+  height: 250px;
+}
+.heroFullBG {
+  background-image: url(../images/shelf.jpg);
+}
+/* Book Page */
+.selectedBook{
+  outline: solid 3px rgba(167, 166, 166, 0.7);
+  outline-offset: 3px;
+}
+.bookMenu nav {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  width: 500px;
+  height: 35px;
+  top: 0;
+  margin-left: 210px;
+  border-radius: 0 0 8px 8px;
+  background-color: var(--color-lightBlue);
+}
+.bookMenu ul{
+  margin: 0;
+  padding: 0;
+}
+.bookMenu nav a {
+  color: var(--color-brown);
+}
+.bookMenu ul li {
+  display: inline-block;
+  font-size: 1.3em;
+  color: var(--color-brown);
+  font-weight: 600;
+  cursor: pointer;
+}
+.bookMenu nav ul li:not(:last-child):after {
+  content: "|";
+  padding: 0 10px 0 10px;
+}
+.bookList ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-top: 45px;
+  margin-left: 25px;
+  width: 100%;
+}
+.bookList ul li {
+  left: 0;
+  display: inline-block;
+  padding-right:55px;
+}
+
+#specialOfferLeft {
+  grid-column: 1/6;
+  /* Remove as content will dictate height */
+  position: relative;
+  background-color: var(--color-white);
+  height: 300px;
+}
+.lbl_price {
+  position: absolute;
+  right: 5px;
+  display: grid;
+  place-items: center;
+  top: 0;
+  width: 100px;
+  height: 35px;
+  background-color: var(--color-lightBlue);
+  border-radius: 0 0 8px 8px;
+  font-size: 1.5em;
+  color: var(--color-brown);
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+#lbl_bookTitle {
+  font-family: "Handlee";
+  font-weight: 700;;
+}
+.con {
+  display: grid;
+  grid-template-columns: auto auto;
+  width: 100%;
+}
+
+#specialOfferRight {
+  grid-column: 6/11;
+  /* Remove as content will dictate height */
+  background-color: var(--color-white);
+  height: 300px;
+}
+.bookChart {
+  display: grid;
+  margin-left: 10px;
+  grid-template-columns: 10% 10% 10% 10% 10% auto;
+  width: 100%;
+  height: 200px;
+  border-bottom: solid white 5px;
+}
+#category1 {
+  grid-column: 1/2;
+  background-color: #566780;
+  align-self: end;
+  height: 44%;
+  margin: 0 5px 0 5px;
+}
+.category1 {
+  color: #566780;
+}
+#category2 {
+  grid-column: 2/3;
+  background-color: #008b2e;
+  align-self: end;
+  height: 5%;
+  margin: 0 5px 0 5px;
+}
+.category2 {
+  color: #008b2e;
+}
+#category3 {
+  grid-column: 3/4;
+  background-color: #049b87;
+  align-self: end;
+  height: 22%;
+  margin: 0 5px 0 5px;
+}
+.category3 {
+  color: #049b87;
+}
+#category4 {
+  grid-column: 4/5;
+  background-color: #b48209;
+  align-self: end;
+  height: 17%;
+  margin: 0 5px 0 5px;
+}
+.category4 {
+  color: #b48209;
+}
+#category5 {
+  grid-column: 5/6;
+  background-color: #ac2106;
+  align-self: end;
+  height: 12%;
+  margin: 0 5px 0 5px;
+}
+.category5 {
+  color: #ac2106;
+}
+#legend {
+  grid-column: 6/7;
+  align-self: center;
+  justify-self: center;
+  font-family: "handlee";
+  font-weight: 600;
+  line-height: 30px;
+  font-size: 1.5em;
+}
+/* Audiobook Page */
+.audioChart {
+  display: grid;
+  grid-template-columns: repeat(10, 10%);
+  width: 100%;
+  height: 230px;
+  border-bottom: solid white 5px;
+}
+.wave {
+  align-self: center;
+  justify-self: center;
+  border-radius: 25px;
+  width: 40%;
+}
+#wave1 {
+  grid-column: 1/2;
+  background-color: #4e5e5f;
+  height: 70%;
+}
+
+#wave2 {
+  grid-column: 2/3;
+  background-color: #607e7f;
+  height: 60%;
+}
+#wave3 {
+  grid-column: 3/4;
+  background-color: #ffa657;
+  height: 50%;
+}
+#wave4 {
+  grid-column: 4/5;
+  background-color: #e58839;
+  height: 40%;
+}
+#wave5 {
+  grid-column: 5/6;
+  background-color: #c96f3d;
+  height: 50%;
+}
+#wave6 {
+  grid-column: 6/7;
+  background-color: #ae6135;
+  height: 60%;
+}
+#wave7 {
+  grid-column: 7/8;
+  background-color: #4e5e5f;
+  height: 70%;
+}
+#wave8 {
+  grid-column: 8/9;
+  background-color: #607e7f;
+  height: 60%;
+}
+#wave9 {
+  grid-column: 9/10;
+  background-color: #ffa657;
+  height: 50%;
+}
+#wave10 {
+  grid-column: 10/11;
+  background-color: #c96f3d;
+  height: 40%;
+}
+#audioControl {
+  width: 450px;
+}
+/* About Us*/
+.about {
+  display: grid;
+  place-items: center;
+}
+#lbl_about {
+  display: grid;
+  place-items: center;
+  width: 30%;
+  height: 50px;
+  background-color: var(--color-lightBlue);
+  color: var(--color-brown);
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  margin: 0;
+  padding: 0;
+  font-size: 1.5em;
+  font-family: "handlee";
+  letter-spacing: 2px;
+}
+#p_about {
+  margin-top: 20px;
+  margin-left: 100px;
+  margin-right: 100px;
+  font-size: 1.4em;
+  line-height: 35px;
+}
+.divCategory {
+  position: relative;
+  margin-top: 25px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 50px;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: 420px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: white;
+}
+.lbl_category {
+  position: absolute;
+  left: 15px;
+  font-family: "handlee";
+  font-size: 1.5em;
+  letter-spacing: 2px;
+  font-weight: 600;
+  margin-left: 20px;
+}
+.img_about {
+  position: absolute;
+  right: 15px;
+}
+.visionCon {
+  margin: 0;
+  padding: 0;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+/* Contact */

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Libros | Home</title>
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+
+
+    <div id="container">
+        <h1 class="hidden">Libros Book Store - Home</h1>
+        <header id="mainHeader">
+
+            <div id="logo">
+                <img class="logo" src="images/logo.svg" alt="logo" width="182" height="82">
+            </div>
+            <!--end logo-->
+            <nav id="mainNav" class="navMenu navMenuHeader">
+                <h2 class="hidden">Header Navigation menu</h2>
+                <ul>
+                    <li>
+                        <a href="index.html"><span class="currentPage">Home</span></a>
+                    </li>
+                    <li>
+                        <a href="books.html">Books</a>
+                    </li>
+                    <li>
+                        <a href="audiobooks.html">Audiobooks</a>
+                    </li>
+                    <li>
+                        <a href="events.html">Events</a>
+                    </li>
+                    <li>
+                        <a href="about.html">About us</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+                <section class="searchCon">
+                    <h2 class="hidden">Search</h2>
+
+                    <input id="search" type="search" placeholder="Search...">
+                    <div class="searchIconCon">
+                        <img src="images/search.svg" width="20" height="20" alt="search">
+                    </div>
+
+                    <div class="cart">
+                        <img src="images/cart.svg" width="20" height="20" alt="cart">
+                    </div>
+                </section>
+                <!-- end Search-->
+            </nav>
+            <!--end mainNav-->
+        </header>
+        <!--end mainHeader-->
+        <main>
+            <div id="heroImage">
+                <img src="images/hero.jpg" width="509" height="210" alt="hero image">
+                <p id="quote">“IF YOU ARE GOING
+                    TO GET ANYWHERE IN
+                    LIFE, YOU HAVE TO READ
+                    A LOT OF BOOKS”<br>Roald Dahl
+                </p>
+            </div>
+            <!--end promoText-->
+            <div id="heroText">
+                <section>
+                    <h2 id="lbl_login">Login</h2>
+                    <form action="form.php" method="post" class="form" autocomplete="off">
+                        <label for="txt_userName" class="lbl_login">User name:<span class="required">*</span></label>
+                        <input type="text" id="txt_userName" name="userName" placeholder="User name" required
+                            class="shortInput">
+
+                        <label for="txt_password" class="lbl_login">Password:<span class="required">*</span></label>
+                        <input type="password" id="txt_password" name="password" placeholder="Password" required
+                            class="shortInput">
+
+                        <input type="submit" value="Login" id="login" class="btn_short">
+                        <div class="link">
+                            <a href="#">Sign in</a><a href="#"> Forget Password</a>
+                        </div>
+                    </form>
+                </section>
+            </div>
+            <!--end promoImage-->
+            <div id="product1">
+                <section>
+                    <h2 class="lbl_product">Audiobooks</h2>
+                    <img src="images/audiobooks.jpg" width="262" height="200" alt="audiobooks">
+                    <a href="audiobooks.html" class="productLink">Explore
+                    </a>
+                </section>
+            </div>
+            <!--end promoImage-->
+            <div id="product2">
+                <section>
+                    <h2 class="lbl_product">Books</h2>
+                    <img src="images/books.jpg" width="262" height="200" alt="books">
+                    <a href="books.html" class="productLink">
+                        Explore
+                    </a>
+                </section>
+            </div>
+            <!--end promoImage-->
+            <div id="product3">
+                <section>
+                    <h2 class="lbl_product">Events</h2>
+                    <img src="images/events.jpg" width="262" height="200" alt="Events">
+                    <a href="events.html" class="productLink">
+                        Explore
+                    </a>
+                </section>
+            </div>
+            <!--end promoImage-->
+        </main>
+
+        <footer id="mainFooter">
+
+
+            <div id="footerNav" class="navMenu">
+                <h2 class="hidden">Footer Navigation menu</h2>
+                <ul>
+                    <li>
+                        <a href="index.html"><span class="currentPage">Home</span></a>
+                    </li>
+                    <li>
+                        <a href="books.html">Books</a>
+                    </li>
+                    <li>
+                        <a href="audiobooks.html">Audiobooks</a>
+                    </li>
+                    <li>
+                        <a href="events.html">Events</a>
+                    </li>
+                    <li>
+                        <a href="about.html">About us</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+            <!--end FooterNav-->
+            <div id="copyRight" class="socialMedia boxColor1">
+                <ul>
+                    <li><img src="images/facebook.svg" width="20" height="20" alt="facebook"></li>
+                    <li><img src="images/twitter.svg" width="20" height="20" alt="twitter"></li>
+                    <li><img src="images/instagram.svg" width="20" height="20" alt="instagram"></li>
+                </ul>
+                <p id="p_copyRight">Copyright 2022. All rights reserved.</p>
+            </div>
+            <!--end Copyright-->
+
+        </footer>
+        <!--end mainFooter-->
+    </div>
+    <!--end container-->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
