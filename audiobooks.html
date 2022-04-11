@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Libros | Audiobooks</title>
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <h1 class="hidden">Libros Book Store - Audiobooks</h1>
+    <div id="container">
+
+        <header id="mainHeader">
+
+            <div id="logo">
+                <img class=" logo" src="images/logo.svg" alt="logo" width="182" height="82">
+            </div>
+            <!--end logo-->
+            <nav id="mainNav" class="navMenu navMenuHeader">
+                <h2 class="hidden">Header Navigation menu</h2>
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="books.html">Books</a>
+                    </li>
+                    <li>
+                        <a href="audiobooks.html"><span class="currentPage">Audiobooks</span></a>
+                    </li>
+                    <li>
+                        <a href="events.html">Events</a>
+                    </li>
+                    <li>
+                        <a href="about.html">About us</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+                <section class="searchCon">
+                    <h2 class="hidden">Search</h2>
+
+                    <input id="search" type="search" placeholder="Search...">
+                    <div class="searchIconCon">
+                        <img src="images/search.svg" width="20" height="20" alt="search">
+                    </div>
+
+                    <div class="cart">
+                        <img src="images/cart.svg" width="20" height="20" alt="cart">
+                    </div>
+                </section>
+
+                <!-- end Search-->
+            </nav>
+            <!--end mainNav-->
+        </header>
+        <main>
+            <div id="heroFull" class="heroFullBG ">
+                <!-- <img src="images/shelf.jpg" width="920" height="250" alt="shelf"> -->
+                <section class="bookMenu">
+                    <h2 class="hidden">Books Menu</h2>
+                    <nav>
+                        <h3 class="hidden">Books Navigation Menu</h3>
+                        <ul>
+                            <li>
+                                <a href="#">Fiction</a>
+                            </li>
+                            <li>
+                                <a href="#">Personal Development</a>
+                            </li>
+                            <li>
+                                <a href="#" class="selectedBook">Kids</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </section>
+                <section class="bookList">
+                    <h2 class="hidden">Book List</h2>
+                    <img src="images/arrow.svg" width="16" height="16" alt="previous page" class="arrow arrowPrevious">
+                    <img src="images/arrow.svg" width="16" height="16" alt="previous page" class="arrow arrowNext">
+                    <ul>
+                        <li><a href="#"><img src="images/audiobook1.jpg" width="130" height="200" alt="book1"></a>
+                        </li>
+                        <li><a href="#"><img src="images/audiobook2.jpg" width="130" height="200" alt="book2"
+                                    class="selectedBook"></a></li>
+                        <li><a href="#"><img src="images/audiobook3.jpg" width="130" height="200" alt="book3"></a></li>
+                        <li><a href="#"><img src="images/audiobook4.jpg" width="130" height="200" alt="book4"></a></li>
+                        <li><a href="#"><img src="images/audiobook5.jpg" width="130" height="200" alt="book4"></a></li>
+                    </ul>
+                </section>
+            </div><!-- end heroFull -->
+            <div id="specialOfferLeft" class="">
+                <section>
+                    <h2 class="hidden">Book Details</h2>
+                    <label class="lbl_price">Free</label>
+                    <label id="lbl_bookTitle" class="lbl_main">Hardy Boys 16</label>
+                    <div id="synopsis">
+                        <label class="lbl_general">
+                            Brief
+                        </label>
+                        <p class="p_general">A blind peddler’s warning and a weird glass eye plunge Frank and Joe Hardy
+                            into one of the most baffling cases they have ever tackled. The young detectives’
+                            investigation takes them to a walled estate guarded by savage dogs, ...</p>
+                    </div>
+                    <div class="con">
+                        <div id="author">
+                            <label class="lbl_general">
+                                Taped
+                            </label>
+                            <p class="p_general">Franklin W. Dixon</p>
+                        </div>
+                        <div id="date_published">
+                            <label class="lbl_general">
+                                Date Published
+                            </label>
+                            <p class="p_general">May 1, 1937</p>
+                        </div>
+                    </div>
+                    <div class="con">
+                        <div id="category">
+                            <label class="lbl_general">
+                                Category
+                            </label>
+                            <p class="p_general">Fiction</p>
+                        </div>
+                        <a href="#" class="productLink">Source</a>
+                    </div>
+                </section>
+            </div><!-- end specialOfferLeft -->
+            <div id="specialOfferRight" class="">
+                <section class="audioChart">
+                    <h2 class="hidden">Audio Waves Chart</h2>
+                    <div id="wave1" class="wave"></div>
+                    <div id="wave2" class="wave"></div>
+                    <div id="wave3" class="wave"></div>
+                    <div id="wave4" class="wave"></div>
+                    <div id="wave5" class="wave"></div>
+                    <div id="wave6" class="wave"></div>
+                    <div id="wave7" class="wave"></div>
+                    <div id="wave8" class="wave"></div>
+                    <div id="wave9" class="wave"></div>
+                    <div id="wave10" class="wave"></div>
+                </section>
+                <audio controls id="audioControl">
+                </audio>
+            </div><!-- end specialOfferRight -->
+        </main>
+
+        <footer id="mainFooter">
+            <div id="footerNav" class="navMenu ">
+                <h2 class="hidden">Footer Navigation menu</h2>
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="books.html">Books</a>
+                    </li>
+                    <li>
+                        <a href="audiobooks.html"><span class="currentPage">Audiobooks</span></a>
+                    </li>
+                    <li>
+                        <a href="events.html">Events</a>
+                    </li>
+                    <li>
+                        <a href="about.html">About us</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+            <!--end FooterNav-->
+            <div id="copyRight" class="socialMedia ">
+                <ul>
+                    <li><img src="images/facebook.svg" width="20" height="20" alt="facebook"></li>
+                    <li><img src="images/twitter.svg" width="20" height="20" alt="twitter"></li>
+                    <li><img src="images/instagram.svg" width="20" height="20" alt="instagram"></li>
+                </ul>
+                <p id="p_copyRight">Copyright 2022. All rights reserved.</p>
+            </div>
+            <!--end Copyright-->
+
+        </footer>
+
+    </div>
+    <!--end siteContainer-->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
