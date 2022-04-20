@@ -13,10 +13,12 @@
 @font-face {
   src: url(../assets/jura.woff);
   font-family: "Jura";
+  font-display: swap;
 }
 @font-face {
   src: url(../assets/handlee.woff);
   font-family: "Handlee";
+  font-display: swap;
 }
 
 /*Remove this rule on your HTML elements as you start to fill them with content*/
